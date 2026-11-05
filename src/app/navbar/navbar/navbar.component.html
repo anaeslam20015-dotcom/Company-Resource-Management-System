@@ -1,0 +1,32 @@
+<div class="cont">
+  <div class="top m-2">
+    <h4>
+      <i class="pi pi-user mx-1"></i> Componay Structure & Employees Allocation
+    </h4>
+  </div>
+  <nav>
+    <div class="left">
+      @for (item of Componay; track $index) {
+        <div class="box">
+          <i [class]="item.image"></i>
+          <div class="t">
+            <p>{{ item.title }}</p>
+            <h3>{{ item.total }}</h3>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="right">
+      <p-iconField iconPosition="left">
+        <p-inputIcon styleClass="pi pi-search" />
+        <input
+          type="text"
+          pInputText
+          placeholder="Search department or employee..."
+        />
+      </p-iconField>
+      <button class="btn btn-outline-primary">Filter</button>
+    </div>
+  </nav>
+</div>

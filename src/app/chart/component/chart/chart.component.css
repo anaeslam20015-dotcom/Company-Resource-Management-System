@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.containe,
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.months-grid,
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  width: 100%;
+}
+
+.timeline-grid {
+  position: relative;
+  align-items: center;
+  height: 40px;
+}
+
+.grid-column-guide {
+  height: 100%;
+  border-right: 1px dashed #e2e8f0;
+  grid-row: 1;
+}
+
+.gantt-bar {
+  grid-row: 1;
+  height: 28px;
+  border-radius: 4px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+:host ::ng-deep .p-treetable td {
+  border: 1px solid #dee2e6;
+}
+
+:host ::ng-deep .p-treetable th {
+  border: 1px solid #dee2e6;
+}

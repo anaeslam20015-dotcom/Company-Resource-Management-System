@@ -1,0 +1,58 @@
+<div class="containe">
+  <div class="card">
+    <h4 class="m-3">Gantt Chart</h4>
+
+    <p-treeTable
+      [tableStyle]="{ width: '100%', 'table-layout': 'fixed' }"
+      [value]="companyData"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 250px">Department / Team</th>
+          <th style="width: 80px">Start</th>
+          <th style="width: 80px">End</th>
+          <th style="width: 120px">Employees</th>
+          <th class="timeline-header-cell">
+            <div class="months-grid">
+              @for (item of months; track $index) {
+                <span>{{ item }}</span>
+              }
+            </div>
+          </th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+        <tr [ttRow]="rowNode">
+          <td>
+            <p-treeTableToggler [rowNode]="rowNode" />
+            <span class="fw-bold">{{ rowData.name }}</span>
+          </td>
+          <td class="text-center">{{ rowData.start }}</td>
+          <td class="text-center">{{ rowData.end }}</td>
+          <td class="text-center">{{ rowData.employees }}</td>
+
+          <td class="timeline-body-cell">
+            <div class="timeline-grid">
+              @for (item of months; track $index) {
+                <div class="grid-column-guide"></div>
+              }
+
+              <div
+                class="gantt-bar"
+                [style.grid-column]="
+                  getStartMonthIndex(rowData.start) +
+                  ' / span ' +
+                  getMonthDuration(rowData.start, rowData.end)
+                "
+                [style.background-color]="rowData.color || '#3b82f6'"
+              >
+                {{ rowData.name }} ({{ rowData.employees }})
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-treeTable>
+  </div>
+</div>

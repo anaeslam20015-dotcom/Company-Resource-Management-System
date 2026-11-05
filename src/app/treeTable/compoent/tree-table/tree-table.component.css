@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.contain,
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+:host ::ng-deep .p-treetable td {
+  border: 1px solid #dee2e6;
+}
+
+:host ::ng-deep .p-treetable th {
+  border: 1px solid #dee2e6;
+}

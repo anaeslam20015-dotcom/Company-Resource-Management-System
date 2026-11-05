@@ -1,0 +1,28 @@
+<div class="contain">
+  <div class="card">
+    <h4 class="m-3">Company Structure</h4>
+    <p-treeTable
+      [value]="Data"
+      [tableStyle]="{ width: '100%', 'table-layout': 'fixed' }"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th class="w-50">Department / Team</th>
+          <th>Manager</th>
+          <th>Employees</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowNode let-rowData="rowData">
+        <tr [ttRow]="rowNode"
+        >
+          <td>
+            <p-treeTableToggler [rowNode]="rowNode" />
+            <span class="fw-bold">{{ rowData.name }}</span>
+          </td>
+          <td class="text-center">{{ rowData.manager }}</td>
+          <td class="text-center">{{ rowData.employees }}</td>
+        </tr>
+      </ng-template>
+    </p-treeTable>
+  </div>
+</div>

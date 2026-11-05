@@ -1,0 +1,37 @@
+.box {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  width: 100%;
+}
+
+.structure,
+.gantt {
+  min-width: 0;
+  display: flex;
+}
+
+.structure {
+  flex: 0 0 35%;
+}
+
+.gantt {
+  flex: 1;
+}
+
+.structure app-tree-table,
+.gantt app-chart {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+  }
+
+  .box app-tree-table,
+  .box app-chart {
+    width: 100%;
+  }
+}

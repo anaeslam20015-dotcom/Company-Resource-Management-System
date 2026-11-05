@@ -1,0 +1,102 @@
+[
+  {
+    "data": {
+      "id": "1",
+      "name": "Company",
+      "manager": "__",
+      "employees": 95,
+      "start": "Apr 2025",
+      "end": "Dec 2025",
+      "color": "#1d4ed8"
+    },
+    "expanded": true,
+    "children": [
+      {
+        "data": {
+          "id": "1-1",
+          "name": "IT Department",
+          "manager": "Ahmed",
+          "employees": 50,
+          "start": "Apr 2025",
+          "end": "Dec 2025",
+          "color": "#3b82f6"
+        },
+        "expanded": true,
+        "children": [
+          {
+            "data": {
+              "id": "1-1-1",
+              "name": "Backend Team",
+              "manager": "Mohamed",
+              "employees": 20,
+              "start": "Apr 2025",
+              "end": "Jun 2025",
+              "color": "#22c55e"
+            }
+          },
+          {
+            "data": {
+              "id": "1-1-2",
+              "name": "Frontend Team",
+              "manager": "Ali",
+              "employees": 15,
+              "start": "May 2025",
+              "end": "Aug 2025",
+              "color": "#a855f7"
+            }
+          },
+          {
+            "data": {
+              "id": "1-1-3",
+              "name": "DevOps Team",
+              "manager": "Omar",
+              "employees": 15,
+              "start": "Jun 2025",
+              "end": "Dec 2025",
+              "color": "#f97316"
+            }
+          }
+        ]
+      },
+      {
+        "data": {
+          "id": "1-2",
+          "name": "HR Department",
+          "manager": "Sara",
+          "employees": 12,
+          "start": "Apr 2025",
+          "end": "Dec 2025",
+          "color": "#f43f5e"
+        },
+        "expanded": false,
+        "children": []
+      },
+      {
+        "data": {
+          "id": "1-3",
+          "name": "Finance Department",
+          "manager": "Hany",
+          "employees": 18,
+          "start": "Apr 2025",
+          "end": "Dec 2025",
+          "color": "#06b6d4"
+        },
+        "expanded": false,
+        "children": []
+      },
+      {
+        "data": {
+          "id": "1-4",
+          "name": "Marketing Department",
+          "manager": "Mona",
+          "employees": 10,
+          "start": "Apr 2025",
+          "end": "Dec 2025",
+          "color": "#eab308"
+        },
+        "expanded": false,
+        "children": []
+      }
+    ]
+  }
+]
