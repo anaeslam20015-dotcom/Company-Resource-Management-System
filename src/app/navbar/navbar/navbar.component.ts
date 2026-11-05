@@ -35,7 +35,7 @@ export class NavbarComponent {
         const company = data[0];
 
         this.totalEmployees = company.data.employees;
-        console.log(this.totalEmployees);
+        /* console.log(this.totalEmployees); */
 
         const departments = company.children;
         this.totalDepartments = departments.length;

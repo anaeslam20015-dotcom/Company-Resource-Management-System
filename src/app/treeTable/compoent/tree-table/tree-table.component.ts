@@ -18,7 +18,7 @@ export class TreeTableComponent {
     this.service.getData().subscribe({
       next: (data) => {
         this.Data = data;
-        console.log(this.Data);
+        /* console.log(this.Data); */
       },
       error: (error) => {
         console.error('errorMessage', error);
